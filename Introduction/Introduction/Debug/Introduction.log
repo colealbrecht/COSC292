@@ -1,0 +1,7 @@
+﻿  intro.c
+d:\virpc\cosc292\cosc292\introduction\introduction\intro.c(30): warning C4305: 'initializing': truncation from 'double' to 'float'
+d:\virpc\cosc292\cosc292\introduction\introduction\intro.c(34): warning C4473: 'printf' : not enough arguments passed for format string
+  d:\virpc\cosc292\cosc292\introduction\introduction\intro.c(34): note: placeholders and their parameters expect 1 variadic arguments, but 0 were provided
+  d:\virpc\cosc292\cosc292\introduction\introduction\intro.c(34): note: the missing variadic argument 1 is required by format string '%c'
+d:\virpc\cosc292\cosc292\introduction\introduction\intro.c(65): warning C4215: nonstandard extension used: long float
+  Introduction.vcxproj -> D:\virpc\COSC292\COSC292\Introduction\Debug\Introduction.exe
