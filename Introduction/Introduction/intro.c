@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /* <-- Comment
 Similar to "using" statements in C# or "import" statements in Java
@@ -87,7 +88,79 @@ void Modifiers(void)
 /* Casting in C */
 void CastDemo(void)
 {
+    int x;
+    float y = 3.2f;
+    float fahr = 115;
+    float celc = 0;
+
+    /* Assign y to x - sometimes we cast to get rid of a warning and show we intended to do this*/
+    x = (int)y;
+
+    printf("The value of x is %d\n", x);
+
+    /* Temp Conversion */
+    printf("The temperature in fahrenheit is %.2f\n", fahr);
+
+    /* Have to cast one of the ints as a float or you will get truncation error with integer division */
+    celc = ((float)5/9) * (fahr - 32.0);
     
+    printf("The temperature in celcius is %.2f\n", celc);
+
+
+
+}
+
+/* Constants */
+void DemoConstants(void)
+{
+    /* Note the keyword const */
+    const float pi = 3.14159;
+    
+    /* Try to increment pi */
+    /* pi = pi + 1; - Error l-value specifies a const object - Left value is a constant so a new value cannot be assigned to it */
+    
+    printf("The value of pi is %f\n", pi);
+}
+
+/* Strings in C --> Wait a minute! There are no strings in C, well, not string objects */
+/* Strings are just arrays of characters */
+void StringDemo(void)
+{
+    char myChar = 'm'; /* Single quotes surround any single character */
+    char s1[] = "Bill"; /* Can initialize a string literal to a char[]. Double quotes indicate a string */
+    char s2[5]; /* s2 = "John"; Cant assign a string literal to a char array, only initialize */
+    char s3[5];
+    
+
+    /* The only way to put John in the array */
+    s2[0] = 'J';
+    s2[1] = 'o';
+    s2[2] = 'h';
+    s2[3] = 'n';
+
+    /* Lets null terminate our string */
+    s2[4] = '\0'; /* or s2[4] = 0 */
+
+
+    printf("The value of s1 is %s\n", s1);
+    printf("The value of s2 is %s\n", s2);
+
+    printf("The size of s1 is %d\n", sizeof(s1)); /* Size is 5 since the string is automatically null terminated*/
+    printf("The size of s2 is %d\n", sizeof(s2));
+    
+    /* There are built in string functions in the string.h library */
+    /* Examples */
+
+    /* strlen - length of a string not including null terminator */
+    printf("The length of s1 is %d\n", strlen(s1));
+
+    /* strcpy - copy the contents of one string to another */
+    /* strcpy(s3, s1); Microsoft says this is not safe so they made their own "safe" function */
+
+    strcpy_s(s3, sizeof(s1), s2); /* Is it really safer? No... */
+
+    printf("The value of s3 is %s\n", s2);
+
 }
 
 int main(void)
@@ -95,6 +168,7 @@ int main(void)
 	/*printf("Hello Cruel World");*/
     /*PrimitiveDataTypes();*/
     /*Modifiers();*/
-
-    CastDemo();
+    /*CastDemo();*/
+    /*DemoConstants();*/
+    StringDemo();
 }
