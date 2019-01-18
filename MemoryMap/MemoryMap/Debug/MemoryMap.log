@@ -1,0 +1,5 @@
+﻿  memory.c
+d:\virpc\cosc292\cosc292\memorymap\memorymap\memory.c(9): warning C4305: 'initializing': truncation from 'double' to 'float'
+  program.c
+  Generating Code...
+  MemoryMap.vcxproj -> D:\virpc\COSC292\COSC292\MemoryMap\Debug\MemoryMap.exe
