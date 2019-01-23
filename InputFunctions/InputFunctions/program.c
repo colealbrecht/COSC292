@@ -103,13 +103,27 @@ void main(void)
 
 void string_cat(char * leftPtr, char * rightPtr)
 {
-    strcat(leftPtr, rightPtr);
+    /* Create a pionter that points to the destination where we want to start copying */
+
+    int i = 0;
+
+    char * appendPtr = leftPtr + strlen(leftPtr);
+
+    /* use a loop to copy characters over */
+    /* Make sure your loop copies the null terminator */
+
+    do
+    {
+        /* Copy from source to destination */
+        appendPtr[i] = rightPtr[i];
+    }while(rightPtr[i++] != '\0');
+    
 }
 
 void test_string_cat(void)
 {
     char left [] = "Hello";
-    char right [] = "World";
+    char right [] = "World\n";
     char concat [20];
 
     concat[0] = '\0';
