@@ -93,23 +93,32 @@ void main(void)
     /* test_enter_name(); */
 
     /* Exercise 1 - 3 */
-    string_funcs();
+    /* string_funcs(); */
+
+    /* Exercise 1 - 4*/
+    test_string_cat();
+
 
 }
 
-void test_string_cat()
+void string_cat(char * leftPtr, char * rightPtr)
 {
-    char left[] = "Hello";
-    char right[] = "World";
-    char concat[20];
-    
+    strcat(leftPtr, rightPtr);
+}
+
+void test_string_cat(void)
+{
+    char left [] = "Hello";
+    char right [] = "World";
+    char concat [20];
+
     concat[0] = '\0';
 
     string_cat(concat, left);
     string_cat(concat, " ");
     string_cat(concat, right);
 
-    printf("%s" , concat);
+    printf("%s", concat);
 }
 
 void string_funcs(void)
@@ -161,6 +170,12 @@ void string_funcs(void)
 
 
     /* Testing strcat - String concat */
+
+    char * ptrRight = "Hello";
+    char tconcat [20];
+    tconcat [0] = '\0';
+
+    printf("strcat %s\n", strcat(tconcat, ptrRight));
 
     /* Testing strcmp - String compare */
 
