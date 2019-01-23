@@ -1,6 +1,0 @@
-﻿  program.c
-d:\virpc\cosc292\cosc292\inputfunctions\inputfunctions\program.c(50): warning C4101: 'cArray2': unreferenced local variable
-d:\virpc\cosc292\cosc292\inputfunctions\inputfunctions\program.c(49): warning C4101: 'cArray': unreferenced local variable
-d:\virpc\cosc292\cosc292\inputfunctions\inputfunctions\program.c(51): warning C4101: 'cBuffer': unreferenced local variable
-d:\virpc\cosc292\cosc292\inputfunctions\inputfunctions\program.c(340): warning C4172: returning address of local variable or temporary: cBuffer
-  InputFunctions.vcxproj -> D:\virpc\COSC292\COSC292\InputFunctions\Debug\InputFunctions.exe

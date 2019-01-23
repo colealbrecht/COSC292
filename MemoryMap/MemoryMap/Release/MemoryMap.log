@@ -1,7 +1,0 @@
-﻿  memory.c
-d:\virpc\cosc292\cosc292\memorymap\memorymap\memory.c(9): warning C4305: 'initializing': truncation from 'double' to 'float'
-  program.c
-  Generating code
-  All 5 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  MemoryMap.vcxproj -> D:\virpc\COSC292\COSC292\MemoryMap\Release\MemoryMap.exe
