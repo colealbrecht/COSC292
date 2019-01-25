@@ -17,9 +17,35 @@ void testIntArrayPrinter()
     intArrayPrinterWithPointer(iArray, iArraySize);
 }
 
+void testCharArrayPrinter(void)
+{
+    charArrayPrinter("Hello Cruel World");
+}
+
+void testCharArrayPrinterWithPointer(void)
+{
+    charArrayPrinterWithPointer("Hello Cruel World");
+}
+
+void testIntBytePrinter(void)
+{
+    intBytePrinter(7106371);
+}
+
+void testEncode(void)
+{
+    double x = encode();
+}
+
+
 int main(int ac, char** av)
 {
-    testIntArrayPrinter();
-    
+    /* testIntArrayPrinter(); */
+    /* testCharArrayPrinter(); */
+    /* estCharArrayPrinterWithPointer(); */
+    /* testIntBytePrinter(); */
+    /* */
+    testEncode();
+
 	return EXIT_SUCCESS;
 }

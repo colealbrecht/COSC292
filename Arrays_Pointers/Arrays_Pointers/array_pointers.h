@@ -10,7 +10,7 @@ void charArrayPrinter(char []);
 
 /* Examples with formal argument names */
 void intArrayPrinterWithPointer(int * iArrayPtr, int iArraySize);
-void charArrayPrinter(char * cArrayPtr);
+void charArrayPrinterWithPointer(char * cArrayPtr);
 void intBytePrinter(int iValue);
 double encode();
 void decode(double x);
