@@ -86,18 +86,12 @@ double encode()
     scanf("%3s", namePtr);
     printf("Enter your age\n");
     scanf("%d", (int *) (namePtr += 4));
-    printf("Enter your student load debt\n");
+    printf("Enter your student loan debt\n");
     scanf("%hu", (short *) ((char * ) ++namePtr));
 
     printf("Encoded Message: ");
-
-    for (int i = 0; i < sizeof(x); i++)
-    {
-        printf("%x", *encodePtr++);
-    }
-
+    printf("%d", x);
     printf("\n");
-
     decode(x);
 
     return x;
