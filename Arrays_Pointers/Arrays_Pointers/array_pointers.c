@@ -85,9 +85,10 @@ double encode()
     printf("Enter 3 letters for your name\n");
     scanf("%3s", namePtr);
     printf("Enter your age\n");
-    scanf("%d", (int *) (namePtr += 4));
+    /* Note that we offset first, then cast to the appropriate pointer type */
+    scanf("%d", (int *) (namePtr + NAME_SIZE));
     printf("Enter your student loan debt\n");
-    scanf("%hu", (short *) ((char * ) ++namePtr));
+    scanf("%hu", (short *) (namePtr + NAME_SIZE + AGE_SIZE));
 
     printf("Encoded Message: ");
     printf("%d", x);
@@ -104,15 +105,13 @@ void decode(double x)
 
     int i = 0;
 
-    printf("Decoded Message: ");
-
-    while (i++ < 4)
-    {
-        printf("%c", *cPtr++);
-    }
-
-    printf("%d", *cPtr++);
-    printf("%hu", *cPtr);
+    printf("Decoded Message: \n");
+    
+    printf("The name is %s\n", cPtr);
+    /* The reason the following print statements need to be dereferenced is because 
+    %d and %hu are looking for the actual values not an adress to the start in memory */
+    printf("The age is %d\n", *(cPtr + NAME_SIZE));
+    printf("The student loan debt is %hu\n", *(cPtr + NAME_SIZE + AGE_SIZE));
 
     printf("\n");
 }
